@@ -1,5 +1,6 @@
-
-
+let firstNumber = 0;
+let secondNumber = 0;
+let operator = '';
 
 
 
@@ -23,4 +24,18 @@ function divide(firstNumber, secondNumber) {
 function multiply(firstNumber, secondNumber) {
     return firstNumber * secondNumber;
 };
+
+
+
+function operate(firstNumber, secondNumber, operator) {
+if(operator == '+') {
+    return add(firstNumber, secondNumber);
+} else if (operator == '-') {
+    return subtract(firstNumber, secondNumber);
+} else if (operator == '/') {
+    return divide(firstNumber, secondNumber);
+} else if (operator = '*') {
+    return multiply(firstNumber, secondNumber);
+}
+}
 
