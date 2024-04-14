@@ -39,3 +39,92 @@ if(operator == '+') {
 }
 }
 
+const buttonZero = document.querySelector(".buttonZero")
+const screen = document.querySelector(".screen")
+buttonZero.addEventListener('click', () => {
+    firstNumber = 0;
+    screen.textContent = "0"
+});
+
+//clear
+const clear = document.querySelector(".clear")
+
+clear.addEventListener('click', () => {
+    firstNumber = 0;
+    screen.textContent = "";
+});
+//number
+const btn1 = document.querySelector(".btn1")
+
+btn1.addEventListener('click', () => {
+    firstNumber = parseInt(screen.textContent + "1");
+    screen.textContent = screen.textContent + "1";
+});
+
+
+//number
+const btn2 = document.querySelector(".btn2")
+
+btn2.addEventListener('click', () => {
+    
+    firstNumber = parseInt(screen.textContent + "2");
+    screen.textContent = screen.textContent + "2";
+    
+});
+console.log(firstNumber)
+//number
+const btn3 = document.querySelector(".btn3")
+
+btn3.addEventListener('click', () => {
+    firstNumber = parseInt(screen.textContent + "3");
+    screen.textContent = screen.textContent + "3";
+});
+//number
+const btn4 = document.querySelector(".btn4")
+
+btn4.addEventListener('click', () => {
+    firstNumber = parseInt(screen.textContent + "4");
+    screen.textContent = screen.textContent + "4";
+});
+//number
+const btn5 = document.querySelector(".btn5")
+
+btn5.addEventListener('click', () => {
+    firstNumber = parseInt(screen.textContent + "5");
+    screen.textContent = screen.textContent + "5";
+});
+//number
+const btn6 = document.querySelector(".btn6")
+
+btn6.addEventListener('click', () => {
+    firstNumber = parseInt(screen.textContent + "6");
+    screen.textContent = screen.textContent + "6";
+});
+//number
+const btn7 = document.querySelector(".btn7")
+
+btn7.addEventListener('click', () => {
+    firstNumber = parseInt(screen.textContent + "7");
+    screen.textContent = screen.textContent + "7";
+});
+//button
+const btn8 = document.querySelector(".btn8")
+
+btn8.addEventListener('click', () => {
+    firstNumber = parseInt(screen.textContent + "8");
+    screen.textContent = screen.textContent + "8";
+});
+//button
+const btn9 = document.querySelector(".btn9")
+
+btn9.addEventListener('click', () => {
+    firstNumber = parseInt(screen.textContent + "9");
+    screen.textContent = screen.textContent + "9";
+});
+//dot
+const dot = document.querySelector(".dot")
+
+dot.addEventListener('click', () => {
+firstNumber = ".";
+screen.textContent = ".";
+});
