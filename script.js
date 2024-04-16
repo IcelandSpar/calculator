@@ -165,7 +165,7 @@ function clearTextArea() {
 
         screen.textContent = "";
 
-        
+
     });
 
 const minusBtn = document.querySelector(".minusBtn");
@@ -205,10 +205,18 @@ divideBtn.addEventListener('click', () => {
 });
 
 
+const plusMinus = document.querySelector(".plusMinus");
+
+plusMinus.addEventListener('click', () => {
+    screen.textContent = '-' + screen.textContent;
+})
 
 
+const percent = document.querySelector(".percent");
 
-
+percent.addEventListener('click', () => {
+screen.textContent = (parseFloat(screen.textContent / 100)).toPrecision(2);
+});
 
 
 const totalBtn = document.querySelector(".totalBtn")
@@ -220,5 +228,7 @@ totalBtn.addEventListener('click', () => {
     screen.textContent = operate(firstNumber, secondNumber, operator);
 
 });
+
+
 
 
