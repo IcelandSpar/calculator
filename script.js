@@ -36,7 +36,7 @@ if(operator == '+') {
     return subtract(firstNumber, secondNumber);
 } else if (operator == '/') {
     return divide(firstNumber, secondNumber);
-} else if (operator = '*') {
+} else if (operator == '*') {
     return multiply(firstNumber, secondNumber);
 }
 }
@@ -57,7 +57,7 @@ clear.addEventListener('click', () => {
     screen.textContent = "";
 });
 
-function printToScreen() {
+
 
     const buttonZero = document.querySelector(".buttonZero")
 
@@ -141,7 +141,7 @@ buttonZero.addEventListener('click', () => {
     screen.textContent = screen.textContent + ".";
     });
   
-} 
+
 
 function getScreenNumber() {
     return screen.textContent
@@ -155,32 +155,70 @@ function clearTextArea() {
 
 
 
-function getOperator() {
+
 
     const plusBtn = document.querySelector(".plusBtn");
 
     plusBtn.addEventListener('click', () => {
-        firstNumber = parseFloat(screen.textContent);
+        firstNumber = parseFloat(getScreenNumber());
         operator = '+'
-        screen.textContent = "+";
+
+        screen.textContent = "";
+
+        
     });
-    return operator
-}
+
+const minusBtn = document.querySelector(".minusBtn");
+
+minusBtn.addEventListener('click', () => {
+    firstNumber = parseFloat(getScreenNumber());
+    operator = '-';
+
+
+    screen.textContent = '';
+
+
+
+});
+
+const multiplyBtn = document.querySelector(".multiplyBtn");
+
+multiplyBtn.addEventListener('click', () => {
+    firstNumber = parseFloat(getScreenNumber());
+    operator = '*';
+
+
+    screen.textContent = '';
+
+
+
+});
+
+const divideBtn = document.querySelector(".divideBtn");
+
+divideBtn.addEventListener('click', () => {
+    firstNumber = parseFloat(getScreenNumber());
+    operator = '/';
+
+
+    screen.textContent = '';
+});
 
 
 
 
-printToScreen();
 
-getOperator();
+
 
 
 const totalBtn = document.querySelector(".totalBtn")
 
 totalBtn.addEventListener('click', () => {
-    secondNumber = parseFloat(screen.textContent);
-    total = operate(firstNumber, secondNumber, operator);
-    screen.textContent = total;
+   
+    secondNumber = parseFloat(getScreenNumber());
+    
+    screen.textContent = operate(firstNumber, secondNumber, operator);
+
 });
 
 
