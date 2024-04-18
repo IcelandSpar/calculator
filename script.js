@@ -69,8 +69,11 @@ buttonZero.addEventListener('click', () => {
     const btn1 = document.querySelector(".btn1")
 
     btn1.addEventListener('click', () => {
+if (screen.textContent.length > 8) {
 
+} else {
         screen.textContent = screen.textContent + "1";
+    }
     });
 
 
@@ -78,9 +81,12 @@ buttonZero.addEventListener('click', () => {
     const btn2 = document.querySelector(".btn2")
 
     btn2.addEventListener('click', () => {
-        
+        if (screen.textContent.length > 8) {
+
+        } else {
 
         screen.textContent = screen.textContent + "2";
+    }
         
     });
     
@@ -88,57 +94,86 @@ buttonZero.addEventListener('click', () => {
     const btn3 = document.querySelector(".btn3")
 
     btn3.addEventListener('click', () => {
+        if (screen.textContent.length > 8) {
+
+        } else {
 
         screen.textContent = screen.textContent + "3";
+        }
     });
     //number
     const btn4 = document.querySelector(".btn4")
 
     btn4.addEventListener('click', () => {
+        if (screen.textContent.length > 8) {
+
+        } else {
 
         screen.textContent = screen.textContent + "4";
+        }
     });
     //number
     const btn5 = document.querySelector(".btn5")
 
     btn5.addEventListener('click', () => {
+        if (screen.textContent.length > 8) {
 
+        } else {
         screen.textContent = screen.textContent + "5";
+        }
     });
     //number
     const btn6 = document.querySelector(".btn6")
 
     btn6.addEventListener('click', () => {
+        if (screen.textContent.length > 8) {
 
+        } else {
         screen.textContent = screen.textContent + "6";
+    }
     });
     //number
     const btn7 = document.querySelector(".btn7")
 
     btn7.addEventListener('click', () => {
+        if (screen.textContent.length > 8) {
 
+        } else {
         screen.textContent = screen.textContent + "7";
+        }
     });
     //button
     const btn8 = document.querySelector(".btn8")
 
     btn8.addEventListener('click', () => {
+        if (screen.textContent.length > 8) {
 
+        } else {
         screen.textContent = screen.textContent + "8";
+        }
     });
     //button
     const btn9 = document.querySelector(".btn9")
 
     btn9.addEventListener('click', () => {
+        if (screen.textContent.length > 8) {
 
-        screen.textContent = screen.textContent + "9";
+        } else {
+        screen.textContent = screen.textContent + "8";
+        }
     });
+
     //dot
     const dot = document.querySelector(".dot")
 
     dot.addEventListener('click', () => {
+if ((screen.textContent.split('.').length == 1 && screen.textContent.length > 8)) {
+
 
     screen.textContent = screen.textContent + ".";
+} else if (((screen.textContent.split('.').length > 1))) {
+screen.textContent = screen.textContent;
+}
     });
   
 
