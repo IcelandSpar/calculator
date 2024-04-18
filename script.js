@@ -171,7 +171,7 @@ if (screen.textContent.length > 8) {
     const dot = document.querySelector(".dot")
 
     dot.addEventListener('click', () => {
-if ((screen.textContent.split('.').length == 1 && screen.textContent.length > 8)) {
+if ((screen.textContent.split('.').length == 1 && screen.textContent.length < 8)) {
 
 
     screen.textContent = screen.textContent + ".";
