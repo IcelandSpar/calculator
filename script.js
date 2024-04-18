@@ -20,7 +20,11 @@ function subtract(firstNumber, secondNumber) {
 };
 
 function divide(firstNumber, secondNumber) {
+    if (secondNumber == 0) {
+        return alert('u funny lil guy');
+    } else {
     return firstNumber / secondNumber;
+}
 };
 
 function multiply(firstNumber, secondNumber) {
@@ -204,6 +208,9 @@ function clearTextArea() {
     plusBtn.addEventListener('click', () => {
         firstNumber = parseFloat(getScreenNumber());
         operator = '+'
+        
+
+
 
         screen.textContent = "";
         plusBtn.style.cssText = "background-color: #f3e2e3;";
@@ -258,7 +265,7 @@ divideBtn.addEventListener('click', () => {
 });
 
 
-//Remember to add negative remover, calculator rn will stack negative signs
+
 
 const plusMinus = document.querySelector(".plusMinus");
 
