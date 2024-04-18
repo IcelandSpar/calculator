@@ -217,7 +217,11 @@ function clearTextArea() {
         minusBtn.style.cssText = "background-color: #e3bbbd;";
         divideBtn.style.cssText = "background-color: #e3bbbd;";
         multiplyBtn.style.cssText = "background-color: #e3bbbd;";
+
+
+
     });
+
 
 const minusBtn = document.querySelector(".minusBtn");
 
@@ -299,9 +303,12 @@ totalBtn.addEventListener('click', () => {
     plusBtn.style.cssText = "background-color: #e3bbbd;";
 
     if (screen.textContent.length > 8) {
-        screen.textContent = parseFloat(operate(firstNumber, secondNumber, operator).toPrecision(4)).toPrecision(4);
+        let rounded = 0;
+        rounded = operate(firstNumber, secondNumber, operator).toPrecision(4)
+        screen.textContent = rounded.toPrecision(4)
     } else if (screen.textContent.length < 8){
-        screen.textContent = parseFloat(operate(firstNumber, secondNumber, operator).toPrecision(4)).toPrecision(4);
+        rounded = operate(firstNumber, secondNumber, operator).toPrecision(4)
+        screen.textContent = parseFloat(rounded)
     }
 });
 
