@@ -291,5 +291,11 @@ totalBtn.addEventListener('click', () => {
 });
 
 
+const deleteBtn = document.querySelector('.deleteBtn');
+
+deleteBtn.addEventListener('click', () => {
+screen.textContent = screen.textContent.slice(0,-1)
+});
+
 
 

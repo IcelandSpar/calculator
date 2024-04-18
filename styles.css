@@ -60,7 +60,7 @@ button {
 }
 
 .buttonZero {
-flex-grow: 10;
+flex-grow: 1;
 }
 
 .operators {
@@ -75,3 +75,7 @@ flex-grow: 10;
     background-color: #df949d;
 }
 
+.deleteBtn {
+
+
+}
