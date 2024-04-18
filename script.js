@@ -21,7 +21,7 @@ function subtract(firstNumber, secondNumber) {
 
 function divide(firstNumber, secondNumber) {
     if (secondNumber == 0) {
-        return alert('u funny lil guy');
+        return alert('the universe will now collapse in on itself');
     } else {
     return firstNumber / secondNumber;
 }
@@ -170,7 +170,7 @@ if (screen.textContent.length > 8) {
         if (screen.textContent.length > 8) {
 
         } else {
-        screen.textContent = screen.textContent + "8";
+        screen.textContent = screen.textContent + "9";
         }
     });
 
@@ -281,7 +281,7 @@ plusMinus.addEventListener('click', () => {
 const percent = document.querySelector(".percent");
 
 percent.addEventListener('click', () => {
-screen.textContent = (parseFloat(screen.textContent / 100)).toPrecision(2);
+screen.textContent = (parseFloat(screen.textContent / 100)).toPrecision(3);
 });
 
 
@@ -299,9 +299,9 @@ totalBtn.addEventListener('click', () => {
     plusBtn.style.cssText = "background-color: #e3bbbd;";
 
     if (screen.textContent.length > 8) {
-        screen.textContent = operate(firstNumber, secondNumber, operator).toPrecision(5);
+        screen.textContent = operate(firstNumber, secondNumber, operator).toPrecision(3);
     } else if (screen.textContent.length < 8){
-        screen.textContent = operate(firstNumber, secondNumber, operator)
+        screen.textContent = operate(firstNumber, secondNumber, operator).toPrecision(3);
     }
 });
 
