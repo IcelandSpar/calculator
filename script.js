@@ -66,8 +66,11 @@ clear.addEventListener('click', () => {
     const buttonZero = document.querySelector(".buttonZero")
 
 buttonZero.addEventListener('click', () => {
+    if (screen.textContent.length > 8) {
 
+    } else {
     screen.textContent = screen.textContent + "0"
+    }
 });
     //number
     const btn1 = document.querySelector(".btn1")
@@ -281,13 +284,18 @@ totalBtn.addEventListener('click', () => {
    
     secondNumber = parseFloat(getScreenNumber());
     
-    screen.textContent = operate(firstNumber, secondNumber, operator);
+    
 
     minusBtn.style.cssText = "background-color: #e3bbbd;";
     divideBtn.style.cssText = "background-color: #e3bbbd;";
     multiplyBtn.style.cssText = "background-color: #e3bbbd;";
     plusBtn.style.cssText = "background-color: #e3bbbd;";
 
+    if (screen.textContent.length > 8) {
+        screen.textContent = operate(firstNumber, secondNumber, operator).toPrecision(5);
+    } else if (screen.textContent.length < 8){
+        screen.textContent = operate(firstNumber, secondNumber, operator)
+    }
 });
 
 
