@@ -281,7 +281,7 @@ plusMinus.addEventListener('click', () => {
 const percent = document.querySelector(".percent");
 
 percent.addEventListener('click', () => {
-screen.textContent = (parseFloat(screen.textContent / 100)).toPrecision(3);
+screen.textContent = parseFloat((parseFloat(screen.textContent / 100))).toPrecision(4);
 });
 
 
@@ -299,9 +299,9 @@ totalBtn.addEventListener('click', () => {
     plusBtn.style.cssText = "background-color: #e3bbbd;";
 
     if (screen.textContent.length > 8) {
-        screen.textContent = operate(firstNumber, secondNumber, operator).toPrecision(3);
+        screen.textContent = parseFloat(operate(firstNumber, secondNumber, operator).toPrecision(4)).toPrecision(4);
     } else if (screen.textContent.length < 8){
-        screen.textContent = operate(firstNumber, secondNumber, operator).toPrecision(3);
+        screen.textContent = parseFloat(operate(firstNumber, secondNumber, operator).toPrecision(4)).toPrecision(4);
     }
 });
 
