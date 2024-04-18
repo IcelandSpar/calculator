@@ -55,6 +55,10 @@ clear.addEventListener('click', () => {
     secondNumber = 0;
     operator = '';
     screen.textContent = "";
+    minusBtn.style.cssText = "background-color: #e3bbbd;";
+    divideBtn.style.cssText = "background-color: #e3bbbd;";
+    multiplyBtn.style.cssText = "background-color: #e3bbbd;";
+    plusBtn.style.cssText = "background-color: #e3bbbd;";
 });
 
 
@@ -199,8 +203,10 @@ function clearTextArea() {
         operator = '+'
 
         screen.textContent = "";
-
-
+        plusBtn.style.cssText = "background-color: #f3e2e3;";
+        minusBtn.style.cssText = "background-color: #e3bbbd;";
+        divideBtn.style.cssText = "background-color: #e3bbbd;";
+        multiplyBtn.style.cssText = "background-color: #e3bbbd;";
     });
 
 const minusBtn = document.querySelector(".minusBtn");
@@ -211,9 +217,10 @@ minusBtn.addEventListener('click', () => {
 
 
     screen.textContent = '';
-
-
-
+    minusBtn.style.cssText = "background-color: #f3e2e3;";
+    divideBtn.style.cssText = "background-color: #e3bbbd;";
+    multiplyBtn.style.cssText = "background-color: #e3bbbd;";
+    plusBtn.style.cssText = "background-color: #e3bbbd;";
 });
 
 const multiplyBtn = document.querySelector(".multiplyBtn");
@@ -225,7 +232,10 @@ multiplyBtn.addEventListener('click', () => {
 
     screen.textContent = '';
 
-
+    minusBtn.style.cssText = "background-color: #e3bbbd;";
+    divideBtn.style.cssText = "background-color: #e3bbbd;";
+    multiplyBtn.style.cssText = "background-color: #f3e2e3;";
+    plusBtn.style.cssText = "background-color: #e3bbbd;";
 
 });
 
@@ -237,6 +247,11 @@ divideBtn.addEventListener('click', () => {
 
 
     screen.textContent = '';
+
+    minusBtn.style.cssText = "background-color: #e3bbbd;";
+    divideBtn.style.cssText = "background-color: #f3e2e3;";
+    multiplyBtn.style.cssText = "background-color: #e3bbbd;";
+    plusBtn.style.cssText = "background-color: #e3bbbd;";
 });
 
 
@@ -267,6 +282,11 @@ totalBtn.addEventListener('click', () => {
     secondNumber = parseFloat(getScreenNumber());
     
     screen.textContent = operate(firstNumber, secondNumber, operator);
+
+    minusBtn.style.cssText = "background-color: #e3bbbd;";
+    divideBtn.style.cssText = "background-color: #e3bbbd;";
+    multiplyBtn.style.cssText = "background-color: #e3bbbd;";
+    plusBtn.style.cssText = "background-color: #e3bbbd;";
 
 });
 
