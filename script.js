@@ -205,10 +205,16 @@ divideBtn.addEventListener('click', () => {
 });
 
 
+//Remember to add negative remover, calculator rn will stack negative signs
+
 const plusMinus = document.querySelector(".plusMinus");
 
 plusMinus.addEventListener('click', () => {
+    if (screen.textContent > 0) {
     screen.textContent = '-' + screen.textContent;
+} else if (screen.textContent < 0) {
+    screen.textContent =  screen.textContent.replace("-", "");
+}
 })
 
 
